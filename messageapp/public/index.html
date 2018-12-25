@@ -1,0 +1,42 @@
+<html ng-app="meanStackTemplate">
+    <head>
+        <title>Mean Stack Template</title>
+        <link rel="icon" href="img/logo.png" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatibel" content="ie-edge">
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <!-- Javascript -->
+        <script type="text/javascript" src="js/jquery/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <script src="js/angular/angular.min.js"></script>
+    </head>
+    <body id="detail" ng-controller="messages">
+        <div class="container">
+            <div class="row" style="margin-bottom: 40px">
+                <header>
+                    <nav class="navbar fixed-top navbar-expand-md navbar-light white double-nav scrolling-navbar" style="background-color:blue; height: 40px;">
+                        <span>This is navbar</span>
+                    </nav>
+                </header>
+            </div>
+            <div class="row" style="margin-left: 10px; margin-right: 10px" ng-repeat="x in messages">
+                <!-- <div class="col-xs-3" style="background-color:aqua">Span</div> --> 
+                
+                <div class="col-xs-6" style="width: 50%; height: 20%;">
+                    <h3>Onlineshop</h3>
+                    <a href="#" ng-click="loadDoc(x.path, x.details)"><img src="{{x.path}}" style="width: 100%; height: 100%"></a>
+                </div>
+                <div class="col-xs-6" style="width: 50%; height: 25%;">
+                    <h3>description</h3>
+                    <div style="width: 100%; height: 100%">{{x.description}}</div>
+                </div>
+                
+                <!-- <div class="col-xs-3" style="background-color:aqua">Span</div> -->
+            </div>
+        </div>
+        <script src="js/index.js"></script>
+        <script src="js/controllers/messages.js"></script>
+    </body>
+</html>
